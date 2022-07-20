@@ -1,0 +1,5 @@
+
+#imgSysLogin:hover, #imgContainer:focused{
+    -fx-border-color: red ;
+    -fx-border-width: 5px 0 0 0;
+}
