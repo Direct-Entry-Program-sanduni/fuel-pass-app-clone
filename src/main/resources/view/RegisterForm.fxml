@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.RegisterFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="pneRegisterForm" prefHeight="742.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
+   <children>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="-6.0" layoutY="52.0" prefHeight="76.0" prefWidth="757.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="6.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="REGISTATION" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <TextFlow layoutX="47.0" layoutY="494.0" prefHeight="32.0" prefWidth="195.0" />
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="14.0" layoutY="125.0" prefHeight="76.0" prefWidth="757.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Already have an account? " textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="lblLoginHere" disable="true" onMouseClicked="#lblLoginOnMouseClick" style="-fx-text-fill: blue;" text="Login Here">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </FlowPane>
+      <Label layoutX="73.0" layoutY="201.0" prefHeight="42.0" prefWidth="183.0" text="Persnol Deatils">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="69.0" layoutY="397.0">
+         <children>
+            <HBox layoutX="4.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="105.0" text="First Name *" />
+               </children>
+            </HBox>
+            <HBox layoutY="24.0">
+               <children>
+                  <TextField fx:id="txtFirstName" disable="true" prefHeight="28.0" prefWidth="309.0" promptText="Ex: Saman" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtLastName" disable="true" prefHeight="28.0" prefWidth="309.0" promptText="Ex :Perera" />
+               </children>
+            </HBox>
+            <Label layoutX="319.0" layoutY="3.0" prefHeight="18.0" prefWidth="105.0" text="Last Name" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtNIC" layoutX="64.0" layoutY="302.0" prefHeight="28.0" prefWidth="657.0" promptText="Ex :895670447v" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38ff1f" height="7.0" layoutX="73.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="657.0" />
+      <Label layoutX="69.0" layoutY="492.0" prefHeight="18.0" prefWidth="105.0" text="Address *" />
+      <TextField fx:id="txtAddress" disable="true" layoutX="69.0" layoutY="527.0" prefHeight="28.0" prefWidth="657.0" promptText="Ex: 399/8, Station Road ,Colombo" />
+      <Button id="btnRegister" fx:id="btvRegister" disable="true" layoutX="73.0" layoutY="620.0" mnemonicParsing="false" onAction="#btnRegistorOnAction" prefHeight="28.0" prefWidth="105.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Register">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblNICStatus" layoutX="66.0" layoutY="339.0" text="Invalid NIC number" />
+      <TextFlow layoutX="67.0" layoutY="277.0" prefHeight="28.0" prefWidth="195.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="80.0" text="NIC Number" />
+            <HBox>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="105.0" text="*" textFill="#ee0101" />
+               </children>
+            </HBox>
+         </children>
+      </TextFlow>
+   </children>
 </AnchorPane>

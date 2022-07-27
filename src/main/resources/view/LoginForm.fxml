@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <FlowPane alignment="CENTER" layoutY="14.0" prefHeight="80.0" prefWidth="622.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="LOGIN" textAlignment="CENTER">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" layoutY="88.0" prefHeight="80.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="593.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Don't have an account?" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#lblRegisterOnMouseClicked" text="Register Here" textAlignment="CENTER" textFill="#410be4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </FlowPane>
+      <TextFlow layoutX="22.0" layoutY="155.0" prefHeight="61.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="107.0" text="Enter Your NIC" />
+            <Label text="*" textFill="#e41515" />
+            <TextField fx:id="txtNic" prefHeight="28.0" prefWidth="575.0" promptText="EX; 963456789v" />
+            <HBox />
+         </children>
+      </TextFlow>
+      <Button fx:id="btnLogin" layoutX="22.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="76.0" style="-fx-background-color: green;" text="Login" />
+   </children>
 </AnchorPane>

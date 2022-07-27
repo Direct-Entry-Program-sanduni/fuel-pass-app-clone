@@ -7,6 +7,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import util.Navigation;
+import util.Routes;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,17 +20,12 @@ public class HomeFormController {
     public ImageView pneLogin;
 
     public void initialize() throws IOException {
-        URL resource = this.getClass().getResource("/view/WelcomeForm.fxml");
-        AnchorPane welcomeForm = FXMLLoader.load(resource);
-        pneContainer.getChildren().add(welcomeForm);
-        AnchorPane.setLeftAnchor(welcomeForm, 0.0);
-        AnchorPane.setRightAnchor(welcomeForm, 0.0);
-        AnchorPane.setTopAnchor(welcomeForm, 0.0);
-        AnchorPane.setBottomAnchor(welcomeForm, 0.0);
+
+        Navigation.navigate(Routes.WELCOME);
 
     }
 
-    public void OnMouseClicked_img(MouseEvent mouseEvent) {
+    public void OnMouseClicked_img(MouseEvent mouseEvent) throws IOException {
         pneContainer.getChildren().clear();
         initialize();
     }

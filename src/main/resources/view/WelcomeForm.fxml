@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pneWelcome" prefHeight="619.0" prefWidth="1047.0" style="-fx-background-color: gray;" stylesheets="@../css/welcomeform.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="controller.WelcomeFormController" fx:id="pneWelcome" prefHeight="619.0" prefWidth="1047.0" style="-fx-background-color: gray;" stylesheets="@../css/welcomeform.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="36.0" prefHeight="44.0" prefWidth="988.0" style="-fx-text-alignment: center;" text="NATIONAL FUEL PASS">
          <font>
